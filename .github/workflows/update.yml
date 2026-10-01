@@ -12,6 +12,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: update-feed
+  cancel-in-progress: false
+
 jobs:
   update:
     runs-on: ubuntu-latest
@@ -25,7 +29,9 @@ jobs:
       - name: Install feedparser
         run: pip install feedparser
 
-      - name: Tarik feed terbaru
+      - name: Tarik feed terbaru + buat ringkasan
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python fetch_feeds.py
 
       - name: Simpan hasil
