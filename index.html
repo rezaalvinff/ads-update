@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ads Update Tracker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f6f7f9;
+    --card: #ffffff;
+    --text: #15171c;
+    --muted: #6b7280;
+    --border: #e5e7eb;
+    --meta: #1877f2;
+    --chatgpt: #10a37f;
+    --ppc: #ea8600;
+    --seo: #188038;
+    --other: #6b7280;
+    --new: #d93025;
+    --chip-bg: #eef0f3;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f1115;
+      --card: #171a21;
+      --text: #e8eaed;
+      --muted: #9aa0a6;
+      --border: #2a2e37;
+      --chip-bg: #232731;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Inter", system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 32px 16px 64px; }
+  header h1 { font-size: 26px; margin: 0 0 4px; letter-spacing: -0.02em; }
+  header p { margin: 0; color: var(--muted); font-size: 14px; }
+
+  .controls { margin: 24px 0 16px; display: flex; flex-direction: column; gap: 12px; }
+  .tabs { display: flex; gap: 8px; flex-wrap: wrap; }
+  .tab {
+    border: 1px solid var(--border);
+    background: var(--card);
+    color: var(--text);
+    padding: 7px 14px;
+    border-radius: 999px;
+    font: inherit;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  .tab .count { color: var(--muted); margin-left: 4px; font-size: 12px; }
+  .tab.active { background: var(--text); color: var(--bg); border-color: var(--text); }
+  .tab.active .count { color: var(--bg); opacity: .7; }
+  .search {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--card);
+    color: var(--text);
+    font: inherit;
+    font-size: 14px;
+  }
+
+  .list { display: flex; flex-direction: column; gap: 10px; }
+  .item {
+    display: block;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color .15s, transform .15s;
+  }
+  .item:hover { border-color: var(--muted); transform: translateY(-1px); }
+  .meta-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; font-size: 12px; color: var(--muted); }
+  .label {
+    font-weight: 600;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 999px;
+    color: #fff;
+  }
+  .label.meta { background: var(--meta); }
+  .label.chatgpt { background: var(--chatgpt); }
+  .label.ppc { background: var(--ppc); }
+  .label.seo { background: var(--seo); }
+  .label.other { background: var(--other); }
+  .new { color: var(--new); font-weight: 700; }
+  .item h2 { font-size: 16px; margin: 6px 0 4px; line-height: 1.35; }
+  .item p { margin: 0; font-size: 14px; color: var(--muted); }
+
+  .empty, .error { text-align: center; color: var(--muted); padding: 40px 0; }
+  footer { margin-top: 32px; font-size: 12px; color: var(--muted); text-align: center; }
+  footer a { color: inherit; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Ads Update Tracker</h1>
+    <p id="updated">Memuat…</p>
+  </header>
+
+  <div class="controls">
+    <div class="tabs" id="tabs"></div>
+    <input class="search" id="search" type="search" placeholder="Cari artikel… (misal: Advantage+, Performance Max, AI Overviews)">
+  </div>
+
+  <div class="list" id="list"></div>
+
+  <footer>
+    Sumber: <a href="https://www.jonloomer.com" target="_blank" rel="noopener">Jon Loomer</a> &amp;
+    <a href="https://searchengineland.com" target="_blank" rel="noopener">Search Engine Land</a>.
+    Klik artikel untuk membaca lengkap di situs aslinya.
+  </footer>
+</div>
+
+<script>
+const TABS = [
+  { id: "all",  name: "Semua" },
+  { id: "meta", name: "Meta Ads" },
+  { id: "ppc",  name: "Google Ads / PPC" },
+  { id: "seo",  name: "SEO" },
+  { id: "other", name: "Lainnya" },
+];
+const LABEL_CLASS = { "Meta Ads": "meta", "ChatGPT Ads": "chatgpt", "PPC": "ppc", "SEO": "seo", "Lainnya": "other" };
+
+let articles = [];
+let activeTab = "all";
+let query = "";
+
+function tabOf(a) {
+  if (a.source === "meta") return "meta";
+  if (a.label === "PPC") return "ppc";
+  if (a.label === "SEO") return "seo";
+  return "other";
+}
+
+function relativeDate(iso) {
+  if (!iso) return "";
+  const diff = (Date.now() - new Date(iso).getTime()) / 1000;
+  if (diff < 3600) return Math.max(1, Math.floor(diff / 60)) + " menit lalu";
+  if (diff < 86400) return Math.floor(diff / 3600) + " jam lalu";
+  if (diff < 86400 * 7) return Math.floor(diff / 86400) + " hari lalu";
+  return new Date(iso).toLocaleDateString("id-ID", { day: "numeric", month: "short", year: "numeric" });
+}
+
+function isNew(iso) {
+  return iso && (Date.now() - new Date(iso).getTime()) < 3 * 86400 * 1000;
+}
+
+function escapeHtml(s) {
+  const d = document.createElement("div");
+  d.textContent = s || "";
+  return d.innerHTML;
+}
+
+function renderTabs() {
+  const counts = { all: articles.length };
+  articles.forEach(a => { const t = tabOf(a); counts[t] = (counts[t] || 0) + 1; });
+  document.getElementById("tabs").innerHTML = TABS
+    .filter(t => t.id === "all" || counts[t.id])
+    .map(t => `<button class="tab ${t.id === activeTab ? "active" : ""}" data-tab="${t.id}">
+        ${t.name}<span class="count">${counts[t.id] || 0}</span></button>`)
+    .join("");
+  document.querySelectorAll(".tab").forEach(btn => {
+    btn.onclick = () => { activeTab = btn.dataset.tab; renderTabs(); renderList(); };
+  });
+}
+
+function renderList() {
+  const q = query.toLowerCase();
+  const shown = articles.filter(a =>
+    (activeTab === "all" || tabOf(a) === activeTab) &&
+    (!q || a.title.toLowerCase().includes(q) || a.excerpt.toLowerCase().includes(q))
+  );
+  const list = document.getElementById("list");
+  if (!shown.length) {
+    list.innerHTML = `<div class="empty">Nggak ada artikel yang cocok.</div>`;
+    return;
+  }
+  list.innerHTML = shown.map(a => `
+    <a class="item" href="${escapeHtml(a.link)}" target="_blank" rel="noopener">
+      <div class="meta-row">
+        <span class="label ${LABEL_CLASS[a.label] || "other"}">${escapeHtml(a.label)}</span>
+        <span>${escapeHtml(a.sourceName)}</span>
+        <span>· ${relativeDate(a.date)}</span>
+        ${isNew(a.date) ? '<span class="new">· BARU</span>' : ""}
+      </div>
+      <h2>${escapeHtml(a.title)}</h2>
+      ${a.excerpt ? `<p>${escapeHtml(a.excerpt)}</p>` : ""}
+    </a>`).join("");
+}
+
+async function load() {
+  try {
+    const res = await fetch("data.json?t=" + Date.now());
+    if (!res.ok) throw new Error(res.status);
+    const data = await res.json();
+    articles = [];
+    Object.entries(data.sources || {}).forEach(([key, src]) => {
+      (src.items || []).forEach(item => articles.push({ ...item, source: key, sourceName: src.source }));
+    });
+    articles.sort((a, b) => new Date(b.date || 0) - new Date(a.date || 0));
+    const updated = new Date(data.updated).toLocaleString("id-ID", {
+      timeZone: "Asia/Jakarta", day: "numeric", month: "long", year: "numeric",
+      hour: "2-digit", minute: "2-digit"
+    });
+    document.getElementById("updated").textContent = `Terakhir diperbarui ${updated} WIB · update otomatis tiap 6 jam`;
+    renderTabs();
+    renderList();
+  } catch (e) {
+    document.getElementById("updated").textContent = "";
+    document.getElementById("list").innerHTML =
+      `<div class="error">Data belum tersedia. Kalau baru setup, tunggu robot GitHub selesai jalan pertama kali (±1–2 menit), lalu refresh.</div>`;
+  }
+}
+
+document.getElementById("search").addEventListener("input", e => { query = e.target.value; renderList(); });
+load();
+</script>
+</body>
+</html>
