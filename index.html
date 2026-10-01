@@ -97,6 +97,24 @@
   .new { color: var(--new); font-weight: 700; }
   .item h2 { font-size: 16px; margin: 6px 0 4px; line-height: 1.35; }
   .item p { margin: 0; font-size: 14px; color: var(--muted); }
+  .summary {
+    margin: 8px 0 0;
+    padding: 10px 12px 10px 14px;
+    background: var(--chip-bg);
+    border-radius: 8px;
+    font-size: 14px;
+  }
+  .summary-title {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 4px;
+  }
+  .summary ul { margin: 0; padding-left: 18px; }
+  .summary li { margin: 3px 0; }
+  .read { display: inline-block; margin-top: 8px; font-size: 13px; font-weight: 600; color: var(--meta); }
 
   .empty, .error { text-align: center; color: var(--muted); padding: 40px 0; }
   footer { margin-top: 32px; font-size: 12px; color: var(--muted); text-align: center; }
@@ -120,7 +138,8 @@
   <footer>
     Sumber: <a href="https://www.jonloomer.com" target="_blank" rel="noopener">Jon Loomer</a> &amp;
     <a href="https://searchengineland.com" target="_blank" rel="noopener">Search Engine Land</a>.
-    Klik artikel untuk membaca lengkap di situs aslinya.
+    Klik artikel untuk membaca lengkap di situs aslinya.<br>
+    Ringkasan dibuat otomatis oleh AI (Gemini) dan bisa keliru, jadi cek artikel aslinya sebelum ambil keputusan.
   </footer>
 </div>
 
@@ -181,14 +200,20 @@ function renderList() {
   const q = query.toLowerCase();
   const shown = articles.filter(a =>
     (activeTab === "all" || tabOf(a) === activeTab) &&
-    (!q || a.title.toLowerCase().includes(q) || a.excerpt.toLowerCase().includes(q))
+    (!q || a.title.toLowerCase().includes(q) || a.excerpt.toLowerCase().includes(q) ||
+      (a.summary || []).join(" ").toLowerCase().includes(q))
   );
   const list = document.getElementById("list");
   if (!shown.length) {
     list.innerHTML = `<div class="empty">Nggak ada artikel yang cocok.</div>`;
     return;
   }
-  list.innerHTML = shown.map(a => `
+  list.innerHTML = shown.map(a => {
+    const body = a.summary && a.summary.length
+      ? `<div class="summary"><div class="summary-title">Ringkasan</div>
+           <ul>${a.summary.map(s => `<li>${escapeHtml(s)}</li>`).join("")}</ul></div>`
+      : (a.excerpt ? `<p>${escapeHtml(a.excerpt)}</p>` : "");
+    return `
     <a class="item" href="${escapeHtml(a.link)}" target="_blank" rel="noopener">
       <div class="meta-row">
         <span class="label ${LABEL_CLASS[a.label] || "other"}">${escapeHtml(a.label)}</span>
@@ -197,8 +222,10 @@ function renderList() {
         ${isNew(a.date) ? '<span class="new">· BARU</span>' : ""}
       </div>
       <h2>${escapeHtml(a.title)}</h2>
-      ${a.excerpt ? `<p>${escapeHtml(a.excerpt)}</p>` : ""}
-    </a>`).join("");
+      ${body}
+      <span class="read">Baca artikel lengkap →</span>
+    </a>`;
+  }).join("");
 }
 
 async function load() {
