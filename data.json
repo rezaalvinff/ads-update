@@ -1,16 +1,23 @@
 {
-  "updated": "2026-10-06T06:25:31.396284+00:00",
+  "updated": "2026-10-06T18:24:48.311339+00:00",
   "sources": {
     "meta": {
       "source": "Jon Loomer",
       "site": "https://www.jonloomer.com",
-      "status": "gagal update, menampilkan data sebelumnya",
+      "status": "ok",
       "items": [
+        {
+          "title": "Meta Sequenced Events: Optimize for Qualified Website Leads",
+          "link": "https://www.jonloomer.com/meta-sequenced-events/",
+          "date": "2026-10-06T11:30:28+00:00",
+          "excerpt": "Learn how Meta Sequenced Events let advertisers optimize for qualified website leads based on two events completed in order.",
+          "label": "Meta Ads"
+        },
         {
           "title": "Should You Optimize for a Custom Conversion?",
           "link": "https://www.jonloomer.com/qvt/optimize-custom-conversion/",
           "date": "2026-10-05T13:30:23+00:00",
-          "excerpt": "When you choose the “maximize number of conversions” performance goal, you have to select a conversion event. This could be a standard event (like “purchase”), a custom event, or a customer conversion for the specific…",
+          "excerpt": "When you choose the “maximize number of conversions” performance goal, you have to select a conversion event. This could be a standard event (like “purchase”), a custom event, or a custom conversion for the specific…",
           "label": "Meta Ads"
         },
         {
@@ -277,13 +284,6 @@
           "link": "https://www.jonloomer.com/qvt/meta-restricted-my-account/",
           "date": "2026-06-21T13:30:47+00:00",
           "excerpt": "This is complete nonsense… Last Tuesday, I shared a screenshot of a new Meta ads feature to my private Facebook group. Immediately after publishing, I added a comment to share a link to Meta’s official documentation…",
-          "label": "Meta Ads"
-        },
-        {
-          "title": "AI Disclosure Checkbox, ChatGPT Attribution, and More",
-          "link": "https://www.jonloomer.com/ai-disclosure-checkbox-chatgpt-attribution/",
-          "date": "2026-06-18T11:30:10+00:00",
-          "excerpt": "Meta adds an AI disclosure checkbox, creative testing expands, and ChatGPT ads attribution raises new questions.",
           "label": "Meta Ads"
         }
       ]
