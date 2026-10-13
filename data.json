@@ -1,11 +1,18 @@
 {
-  "updated": "2026-10-13T00:44:30.820205+00:00",
+  "updated": "2026-10-13T14:16:19.174396+00:00",
   "sources": {
     "meta": {
       "source": "Jon Loomer",
       "site": "https://www.jonloomer.com",
       "status": "ok",
       "items": [
+        {
+          "title": "Meta Adds Automatic Customer Exclusions",
+          "link": "https://www.jonloomer.com/meta-automatic-customer-exclusions/",
+          "date": "2026-10-13T11:30:25+00:00",
+          "excerpt": "Meta adds automatic customer exclusions to Customer Lifecycle Strategy. Here's how they work, their benefits, and limitations.",
+          "label": "Meta Ads"
+        },
         {
           "title": "Which CTA Button Should You Use?",
           "link": "https://www.jonloomer.com/qvt/cta-button/",
@@ -277,13 +284,6 @@
           "link": "https://www.jonloomer.com/instant-form-appointments-chatgpt-conversion-optimization/",
           "date": "2026-06-25T11:30:23+00:00",
           "excerpt": "Meta adds appointment booking from instant forms, while ChatGPT ads now support conversion optimization. Plus, more Meta updates.",
-          "label": "Meta Ads"
-        },
-        {
-          "title": "How Many Active Ad Sets Should You Have in a Meta Ads Campaign?",
-          "link": "https://www.jonloomer.com/active-ad-sets-meta-ads-campaign/",
-          "date": "2026-06-23T23:17:40+00:00",
-          "excerpt": "How to decide how many active ad sets to run in a Meta ads campaign while avoiding budget dilution and audience fragmentation.",
           "label": "Meta Ads"
         }
       ]
