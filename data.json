@@ -1,10 +1,10 @@
 {
-  "updated": "2026-10-19T04:45:41.813833+00:00",
+  "updated": "2026-10-19T13:23:25.904750+00:00",
   "sources": {
     "meta": {
       "source": "Jon Loomer",
       "site": "https://www.jonloomer.com",
-      "status": "ok",
+      "status": "gagal update, menampilkan data sebelumnya",
       "items": [
         {
           "title": "Meta Adds Automatic Customer Exclusions",
