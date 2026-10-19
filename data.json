@@ -1,11 +1,18 @@
 {
-  "updated": "2026-10-19T13:23:25.904750+00:00",
+  "updated": "2026-10-19T22:23:31.123066+00:00",
   "sources": {
     "meta": {
       "source": "Jon Loomer",
       "site": "https://www.jonloomer.com",
-      "status": "gagal update, menampilkan data sebelumnya",
+      "status": "ok",
       "items": [
+        {
+          "title": "Restriction Period for Political Ads in the US",
+          "link": "https://www.jonloomer.com/qvt/restriction-period-political-ads/",
+          "date": "2026-10-19T13:30:13+00:00",
+          "excerpt": "A restriction period is coming to the US. If you run ads about social issues, elections, or politics, listen up… As Meta has done since 2020, this restriction period will block any new ads from running during the final…",
+          "label": "Meta Ads"
+        },
         {
           "title": "Meta Adds Automatic Customer Exclusions",
           "link": "https://www.jonloomer.com/meta-automatic-customer-exclusions/",
@@ -277,13 +284,6 @@
           "link": "https://www.jonloomer.com/qvt/i-need-a-specific-audience/",
           "date": "2026-06-28T13:30:21+00:00",
           "excerpt": "Why did Meta make this change? If you want to turn Advantage+ Audience off, there’s a button at the bottom of the Audience section in the ad set. It previously read “Further limit the reach of your ads.” But Meta…",
-          "label": "Meta Ads"
-        },
-        {
-          "title": "Book Appointments from Instant Forms, ChatGPT Conversion Optimization, and More",
-          "link": "https://www.jonloomer.com/instant-form-appointments-chatgpt-conversion-optimization/",
-          "date": "2026-06-25T11:30:23+00:00",
-          "excerpt": "Meta adds appointment booking from instant forms, while ChatGPT ads now support conversion optimization. Plus, more Meta updates.",
           "label": "Meta Ads"
         }
       ]
