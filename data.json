@@ -1,11 +1,18 @@
 {
-  "updated": "2026-10-26T13:09:19.143076+00:00",
+  "updated": "2026-10-26T22:42:18.756261+00:00",
   "sources": {
     "meta": {
       "source": "Jon Loomer",
       "site": "https://www.jonloomer.com",
       "status": "ok",
       "items": [
+        {
+          "title": "Ads Super Burst, First Impression Ads, and Aggregated View Time",
+          "link": "https://www.jonloomer.com/qvt/ads-super-burst-first-impression-ads-aggregated-view-time/",
+          "date": "2026-10-26T13:30:04+00:00",
+          "excerpt": "During the recent Brand Building Summit, Meta shared several updates. Here are the details of three new ad features… 1. Ads Super Burst Ads Super Burst allows advertisers to book a window of three to 24 hours to reach…",
+          "label": "Meta Ads"
+        },
         {
           "title": "Choose an Audience for Each Ad Creative",
           "link": "https://www.jonloomer.com/choose-an-audience-for-each-ad-creative/",
@@ -277,13 +284,6 @@
           "link": "https://www.jonloomer.com/meta-ads-master-brief/",
           "date": "2026-07-02T11:30:35+00:00",
           "excerpt": "The Master Brief is my complete approach to Meta ads in one document. Targeting, value rules, attribution, creative, and more. Free preview.",
-          "label": "Meta Ads"
-        },
-        {
-          "title": "What to Check When Meta Ads Aren’t Converting",
-          "link": "https://www.jonloomer.com/meta-ads-arent-converting/",
-          "date": "2026-06-30T18:31:35+00:00",
-          "excerpt": "Troubleshoot Meta ads that aren’t converting by checking clicks, landing pages, offers, pixel events, and Conversions API.",
           "label": "Meta Ads"
         }
       ]
