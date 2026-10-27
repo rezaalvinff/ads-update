@@ -1,11 +1,18 @@
 {
-  "updated": "2026-10-27T05:10:16.307554+00:00",
+  "updated": "2026-10-27T12:17:20.640925+00:00",
   "sources": {
     "meta": {
       "source": "Jon Loomer",
       "site": "https://www.jonloomer.com",
       "status": "ok",
       "items": [
+        {
+          "title": "Meta Clarifies Upcoming Placement Control Changes",
+          "link": "https://www.jonloomer.com/meta-placement-control-changes/",
+          "date": "2026-10-27T11:30:42+00:00",
+          "excerpt": "Meta clarifies upcoming placement control changes, including which objectives are impacted, new account-level controls, and alternatives.",
+          "label": "Meta Ads"
+        },
         {
           "title": "Ads Super Burst, First Impression Ads, and Aggregated View Time",
           "link": "https://www.jonloomer.com/qvt/ads-super-burst-first-impression-ads-aggregated-view-time/",
@@ -278,13 +285,6 @@
           "date": "2026-07-06T14:11:36+00:00",
           "excerpt": "Now’s the time to try ChatGPT ads… I joined the ChatGPT ads beta when OpenAI expanded it to advertisers in May. At the time, my biggest complaint was that you couldn’t run conversion-optimized campaigns. The only…",
           "label": "ChatGPT Ads"
-        },
-        {
-          "title": "The Master Brief: My Complete Approach to Meta Ads",
-          "link": "https://www.jonloomer.com/meta-ads-master-brief/",
-          "date": "2026-07-02T11:30:35+00:00",
-          "excerpt": "The Master Brief is my complete approach to Meta ads in one document. Targeting, value rules, attribution, creative, and more. Free preview.",
-          "label": "Meta Ads"
         }
       ]
     },
