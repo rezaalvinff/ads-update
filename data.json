@@ -1,11 +1,18 @@
 {
-  "updated": "2026-11-02T06:12:58.490733+00:00",
+  "updated": "2026-11-02T16:04:42.261207+00:00",
   "sources": {
     "meta": {
       "source": "Jon Loomer",
       "site": "https://www.jonloomer.com",
       "status": "ok",
       "items": [
+        {
+          "title": "Lookalike Audience Suggestions for Leads Campaigns",
+          "link": "https://www.jonloomer.com/qvt/lookalike-audience-suggestions-leads-campaigns/",
+          "date": "2026-11-02T14:30:25+00:00",
+          "excerpt": "Does Meta want advertisers to provide lookalike audience suggestions for leads? I’ve documented how Meta has deprioritized audience suggestions over the years. It started with removing language about prioritizing your…",
+          "label": "Meta Ads"
+        },
         {
           "title": "Meta Clarifies Upcoming Placement Control Changes",
           "link": "https://www.jonloomer.com/meta-placement-control-changes/",
@@ -277,13 +284,6 @@
           "link": "https://www.jonloomer.com/chatgpt-ads-custom-audiences/",
           "date": "2026-07-07T11:30:55+00:00",
           "excerpt": "ChatGPT ads custom audiences allow email and phone list targeting or exclusions, but a 100,000 identifier minimum may limit access.",
-          "label": "ChatGPT Ads"
-        },
-        {
-          "title": "ChatGPT Conversion Campaigns",
-          "link": "https://www.jonloomer.com/qvt/chatgpt-conversion-campaigns/",
-          "date": "2026-07-06T14:11:36+00:00",
-          "excerpt": "Now’s the time to try ChatGPT ads… I joined the ChatGPT ads beta when OpenAI expanded it to advertisers in May. At the time, my biggest complaint was that you couldn’t run conversion-optimized campaigns. The only…",
           "label": "ChatGPT Ads"
         }
       ]
