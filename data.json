@@ -1,11 +1,18 @@
 {
-  "updated": "2026-11-03T14:21:17.382642+00:00",
+  "updated": "2026-11-03T23:25:58.596074+00:00",
   "sources": {
     "meta": {
       "source": "Jon Loomer",
       "site": "https://www.jonloomer.com",
       "status": "ok",
       "items": [
+        {
+          "title": "5 Ways Meta Could Improve Audience Segments",
+          "link": "https://www.jonloomer.com/meta-audience-segments/",
+          "date": "2026-11-03T16:03:37+00:00",
+          "excerpt": "Meta Audience Segments are valuable, but they could be better. Here are five changes that would make them more useful for advertisers.",
+          "label": "Meta Ads"
+        },
         {
           "title": "Lookalike Audience Suggestions for Leads Campaigns",
           "link": "https://www.jonloomer.com/qvt/lookalike-audience-suggestions-leads-campaigns/",
@@ -278,13 +285,6 @@
           "date": "2026-07-09T11:30:31+00:00",
           "excerpt": "Meta’s Lead Capture AI Agent for instant forms, Muse Image, business settings, value rules, and campaign scaling.",
           "label": "Meta Ads"
-        },
-        {
-          "title": "Custom Audiences Come to ChatGPT Ads",
-          "link": "https://www.jonloomer.com/chatgpt-ads-custom-audiences/",
-          "date": "2026-07-07T11:30:55+00:00",
-          "excerpt": "ChatGPT ads custom audiences allow email and phone list targeting or exclusions, but a 100,000 identifier minimum may limit access.",
-          "label": "ChatGPT Ads"
         }
       ]
     },
