@@ -1,11 +1,18 @@
 {
-  "updated": "2026-11-10T19:46:11.816441+00:00",
+  "updated": "2026-11-11T06:30:52.401886+00:00",
   "sources": {
     "meta": {
       "source": "Jon Loomer",
       "site": "https://www.jonloomer.com",
       "status": "ok",
       "items": [
+        {
+          "title": "47 Meta Ads Creative Enhancements: What They Do and When to Turn Them Off",
+          "link": "https://www.jonloomer.com/meta-ads-creative-enhancements/",
+          "date": "2026-11-10T23:39:45+00:00",
+          "excerpt": "Explore 47 Meta Ads creative enhancements, what they do, when to turn them off, and how to customize them to fit your advertising needs.",
+          "label": "Meta Ads"
+        },
         {
           "title": "Measure Conversions on Customer Devices",
           "link": "https://www.jonloomer.com/qvt/measure-conversions-on-customer-devices/",
@@ -277,13 +284,6 @@
           "link": "https://www.jonloomer.com/meta-ads-strategy-principles/",
           "date": "2026-07-14T11:30:12+00:00",
           "excerpt": "This post highlights eight principles that guide my Meta ads strategy, from simplified campaign construction to acting on meaningful results.",
-          "label": "Meta Ads"
-        },
-        {
-          "title": "When is a Campaign Worth Scaling?",
-          "link": "https://www.jonloomer.com/qvt/when-is-a-campaign-worth-scaling/",
-          "date": "2026-07-13T13:30:59+00:00",
-          "excerpt": "You have a high-performing campaign, and increase the budget. Then performance tanks. Do you know why this happens? The biggest problem is that advertisers incorrectly label high-performing campaigns in the first place…",
           "label": "Meta Ads"
         }
       ]
