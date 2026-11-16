@@ -1,11 +1,18 @@
 {
-  "updated": "2026-11-16T06:35:44.259646+00:00",
+  "updated": "2026-11-16T22:08:57.161924+00:00",
   "sources": {
     "meta": {
       "source": "Jon Loomer",
       "site": "https://www.jonloomer.com",
       "status": "ok",
       "items": [
+        {
+          "title": "Meta Simplifies Video Custom Audiences",
+          "link": "https://www.jonloomer.com/qvt/video-custom-audiences/",
+          "date": "2026-11-16T14:30:40+00:00",
+          "excerpt": "Why did Meta do this? Meta made some strange and unexpected changes to video custom audiences. Let’s take a closer look… The Change When you create a video custom audience, you now have three options… All Video Viewers…",
+          "label": "Meta Ads"
+        },
         {
           "title": "47 Meta Ads Creative Enhancements: What They Do and When to Turn Them Off",
           "link": "https://www.jonloomer.com/meta-ads-creative-enhancements/",
@@ -277,13 +284,6 @@
           "link": "https://www.jonloomer.com/meta-redesigns-audiences-around-labels/",
           "date": "2026-07-16T11:30:07+00:00",
           "excerpt": "Meta redesigned the Audiences section to emphasize labels, making it easier to organize custom audiences and use audience value rules.",
-          "label": "Meta Ads"
-        },
-        {
-          "title": "The Principles Behind My Meta Ads Strategy",
-          "link": "https://www.jonloomer.com/meta-ads-strategy-principles/",
-          "date": "2026-07-14T11:30:12+00:00",
-          "excerpt": "This post highlights eight principles that guide my Meta ads strategy, from simplified campaign construction to acting on meaningful results.",
           "label": "Meta Ads"
         }
       ]
