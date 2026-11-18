@@ -1,11 +1,18 @@
 {
-  "updated": "2026-11-17T20:58:18.015928+00:00",
+  "updated": "2026-11-18T07:34:16.612727+00:00",
   "sources": {
     "meta": {
       "source": "Jon Loomer",
       "site": "https://www.jonloomer.com",
       "status": "ok",
       "items": [
+        {
+          "title": "Meta Ads Promotions and Email Sign-up Offers: What They Do and How to Turn Them Off",
+          "link": "https://www.jonloomer.com/meta-ads-promotions-email-sign-up-offers/",
+          "date": "2026-11-17T23:49:51+00:00",
+          "excerpt": "Meta ads promotions can show promo codes on your ads automatically. Learn how they and email sign-up offers work and how to turn them off.",
+          "label": "Meta Ads"
+        },
         {
           "title": "Meta Simplifies Video Custom Audiences",
           "link": "https://www.jonloomer.com/qvt/video-custom-audiences/",
@@ -277,13 +284,6 @@
           "link": "https://www.jonloomer.com/qvt/roas-goal-maximize-number-conversions/",
           "date": "2026-07-20T13:30:24+00:00",
           "excerpt": "This is an interesting change… The ROAS (Return On Ad Spend) Goal bid strategy is now available for the performance goal that “maximizes the number of conversions.” Let’s take a closer look… ROAS Goal History When…",
-          "label": "Meta Ads"
-        },
-        {
-          "title": "Meta Redesigns Audiences Around Labels",
-          "link": "https://www.jonloomer.com/meta-redesigns-audiences-around-labels/",
-          "date": "2026-07-16T11:30:07+00:00",
-          "excerpt": "Meta redesigned the Audiences section to emphasize labels, making it easier to organize custom audiences and use audience value rules.",
           "label": "Meta Ads"
         }
       ]
