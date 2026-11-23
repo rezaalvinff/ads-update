@@ -1,11 +1,25 @@
 {
-  "updated": "2026-11-23T07:44:10.710392+00:00",
+  "updated": "2026-11-23T23:56:53.022059+00:00",
   "sources": {
     "meta": {
       "source": "Jon Loomer",
       "site": "https://www.jonloomer.com",
       "status": "ok",
       "items": [
+        {
+          "title": "Custom Attribution Setup in Events Manager",
+          "link": "https://www.jonloomer.com/qvt/custom-attribution-setup/",
+          "date": "2026-11-23T16:30:52+00:00",
+          "excerpt": "You can now set up custom attribution… Meta announced custom attribution recently as a way to provide different options for how conversions are reported. If you use a third-party analytics partner, in particular, this…",
+          "label": "Meta Ads"
+        },
+        {
+          "title": "First Impression Ads",
+          "link": "https://www.jonloomer.com/qvt/first-impression-ads/",
+          "date": "2026-11-23T14:30:17+00:00",
+          "excerpt": "This could end badly… A few weeks ago, Meta announced the test of a feature in the US called First Impression Ads. This allows advertisers to book the first ad people see in their feeds. Understand that this isn’t some…",
+          "label": "Meta Ads"
+        },
         {
           "title": "Meta Ads Promotions and Email Sign-up Offers: What They Do and How to Turn Them Off",
           "link": "https://www.jonloomer.com/meta-ads-promotions-email-sign-up-offers/",
@@ -271,20 +285,6 @@
           "date": "2026-07-27T13:30:17+00:00",
           "excerpt": "In a somewhat surprising feature release, bid multipliers are here for ChatGPT ads. It’s not clear if all advertisers participating in the beta have access (I do). Let’s take a closer look… What Are Bid Multipliers? If…",
           "label": "ChatGPT Ads"
-        },
-        {
-          "title": "How to Use Meta Ads for Lead Generation",
-          "link": "https://www.jonloomer.com/meta-ads-lead-generation/",
-          "date": "2026-07-21T11:30:44+00:00",
-          "excerpt": "Learn how to use Meta ads for lead generation, evaluate lead quality, compare form options, and determine what a lead is worth.",
-          "label": "Meta Ads"
-        },
-        {
-          "title": "ROAS Goal for Maximize Number of Conversions",
-          "link": "https://www.jonloomer.com/qvt/roas-goal-maximize-number-conversions/",
-          "date": "2026-07-20T13:30:24+00:00",
-          "excerpt": "This is an interesting change… The ROAS (Return On Ad Spend) Goal bid strategy is now available for the performance goal that “maximizes the number of conversions.” Let’s take a closer look… ROAS Goal History When…",
-          "label": "Meta Ads"
         }
       ]
     },
